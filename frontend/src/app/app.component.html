@@ -4,12 +4,12 @@
 <br>
 <input type="text" value="{{name}}">
 <br><br>
-<img src="{{urlImage}}" width="250px" height="250px">
+<img src="{{urlImage}}" width="400px" height="250px">
 
 <br><br>
 
 <h1>Property Binding</h1>
-<img [src]="urlImage2" alt="" width="250px" height="250px">
+<img [src]="urlImage2" alt="" width="400px" height="250px">
 <br>
 <input type="number" [value]="person.age">
 <br>
@@ -25,9 +25,11 @@
 <button (click)="incAge()">+ edad</button>
 
 <ul>
-  <li *ngFor="let name of names">
+  <li *ngFor="let name of names; let i=index">
     {{name}}
+    <button (click)="deletename(i)">Eliminar</button>
   </li>
 </ul>
+    <p *ngIf="names.length==0">Sin datos</p>
 <input [(ngModel)]="nombres" type="text" placeholder="Escribe un nombre">
 <button (click)="addname()">Agregar</button>
