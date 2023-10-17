@@ -1,0 +1,33 @@
+<h1>String Interpolation</h1>
+<h3>{{title}}</h3>
+<input type="number" [(ngModel)]="person.age">
+<br>
+<input type="text" value="{{name}}">
+<br><br>
+<img src="{{urlImage}}" width="250px" height="250px">
+
+<br><br>
+
+<h1>Property Binding</h1>
+<img [src]="urlImage2" alt="" width="250px" height="250px">
+<br>
+<input type="number" [value]="person.age">
+<br>
+<input type="text" [value]="person.name">
+<br>
+<input type="text" [value]="person.lastname">
+<br><br>
+<input type="number" [(ngModel)]="person.age">
+
+<br><br>
+
+<h1>Event Binding</h1>
+<button (click)="incAge()">+ edad</button>
+
+<ul>
+  <li *ngFor="let name of names">
+    {{name}}
+  </li>
+</ul>
+<input [(ngModel)]="nombres" type="text" placeholder="Escribe un nombre">
+<button (click)="addname()">Agregar</button>
